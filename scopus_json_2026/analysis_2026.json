@@ -1,0 +1,965 @@
+{
+  "file_info": {
+    "name": "ext_list_Jan_2026.xlsx",
+    "path": "C:\\Users\\azamd\\Downloads\\New folder (4)\\ext_list_Jan_2026.xlsx",
+    "size_mb": 21.674860954284668,
+    "total_sheets": 7,
+    "year_detected": "2026",
+    "analysis_date": "2026-03-11T09:31:37.307177"
+  },
+  "sheets": {
+    "Scopus Sources Jan. 2026": {
+      "name": "Scopus Sources Jan. 2026",
+      "index": 1,
+      "record_count": 48151,
+      "column_count": 52,
+      "columns": [
+        "Sourcerecord ID",
+        "Source Title",
+        "ISSN",
+        "EISSN",
+        "Active or Inactive",
+        "Coverage",
+        "Titles Discontinued by Scopus",
+        "Article Language in Source (Three-Letter ISO Language Codes)",
+        "Medline-sourced Title? (See additional details under separate tab.)",
+        "Open Access Status",
+        "Articles in Press Included?",
+        "Added to List Jan. 2026",
+        "Source Type",
+        "Title History Indication",
+        "Related Title 1",
+        "Other Related Title 2",
+        "Other Related Title 3",
+        "Other Related Title 4",
+        "Publisher",
+        "Publisher Imprints Grouped to Main Publisher",
+        "All Science Journal Classification Codes (ASJC)",
+        "Top level:\n\nLife Sciences",
+        "Top level:\n\nSocial Sciences",
+        "Top level:\n\nPhysical Sciences",
+        "Top level:\n\nHealth Sciences",
+        "1000 \nGeneral",
+        "1100\nAgricultural and Biological Sciences",
+        "1200\nArts and Humanities",
+        "1300\nBiochemistry, Genetics and Molecular Biology",
+        "1400\nBusiness, Management and Accounting",
+        "1500\nChemical Engineering",
+        "1600\nChemistry",
+        "1700\nComputer Science",
+        "1800\nDecision Sciences",
+        "1900\nEarth and Planetary Sciences",
+        "2000\nEconomics, Econometrics and Finance",
+        "2100\nEnergy",
+        "2200\nEngineering",
+        "2300\nEnvironmental Science",
+        "2400\nImmunology and Microbiology",
+        "2500\nMaterials Science",
+        "2600\nMathematics",
+        "2700\nMedicine",
+        "2800\nNeuroscience",
+        "2900\nNursing",
+        "3000\nPharmacology, Toxicology and Pharmaceutics",
+        "3100\nPhysics and Astronomy",
+        "3200\nPsychology",
+        "3300\nSocial Sciences",
+        "3400\nVeterinary",
+        "3500\nDentistry",
+        "3600\nHealth Professions"
+      ],
+      "detected_type": "main_journals",
+      "sample_data": [
+        {
+          "Sourcerecord ID": "21101170611",
+          "Source Title": "@GRH",
+          "ISSN": "20349130",
+          "EISSN": "22959149",
+          "Active or Inactive": "Active",
+          "Coverage": "2023-2024",
+          "Titles Discontinued by Scopus": "",
+          "Article Language in Source (Three-Letter ISO Language Codes)": "ENG; FRE",
+          "Medline-sourced Title? (See additional details under separate tab.)": "",
+          "Open Access Status": ""
+        },
+        {
+          "Sourcerecord ID": "21100902951",
+          "Source Title": "[Hifu] Skin research",
+          "ISSN": "00181390",
+          "EISSN": "",
+          "Active or Inactive": "Inactive",
+          "Coverage": "1959-2001",
+          "Titles Discontinued by Scopus": "",
+          "Article Language in Source (Three-Letter ISO Language Codes)": "JPN",
+          "Medline-sourced Title? (See additional details under separate tab.)": "",
+          "Open Access Status": ""
+        },
+        {
+          "Sourcerecord ID": "26063",
+          "Source Title": "[Rinsho ketsueki] The Japanese journal of clinical hematology",
+          "ISSN": "04851439",
+          "EISSN": "18820824",
+          "Active or Inactive": "Inactive",
+          "Coverage": "1972-2016",
+          "Titles Discontinued by Scopus": "",
+          "Article Language in Source (Three-Letter ISO Language Codes)": "",
+          "Medline-sourced Title? (See additional details under separate tab.)": "",
+          "Open Access Status": ""
+        }
+      ],
+      "key_columns": {
+        "title": [
+          "Sourcerecord ID",
+          "Source Title",
+          "Titles Discontinued by Scopus",
+          "Article Language in Source (Three-Letter ISO Language Codes)",
+          "Medline-sourced Title? (See additional details under separate tab.)",
+          "Source Type",
+          "Title History Indication",
+          "Related Title 1",
+          "Other Related Title 2",
+          "Other Related Title 3",
+          "Other Related Title 4",
+          "All Science Journal Classification Codes (ASJC)"
+        ],
+        "id": [
+          "Sourcerecord ID",
+          "Titles Discontinued by Scopus"
+        ],
+        "issn": [
+          "ISSN",
+          "EISSN",
+          "Publisher Imprints Grouped to Main Publisher"
+        ],
+        "publisher": [
+          "Publisher",
+          "Publisher Imprints Grouped to Main Publisher"
+        ],
+        "status": [
+          "Active or Inactive",
+          "Titles Discontinued by Scopus",
+          "Open Access Status"
+        ],
+        "coverage": [
+          "Coverage"
+        ],
+        "asjc": [
+          "Article Language in Source (Three-Letter ISO Language Codes)",
+          "All Science Journal Classification Codes (ASJC)"
+        ],
+        "oa": [
+          "Open Access Status"
+        ]
+      },
+      "statistics": {
+        "Sourcerecord ID": {
+          "completeness": "100.0%",
+          "unique_values": 48151,
+          "sample": "21101170611"
+        },
+        "Source Title": {
+          "completeness": "100.0%",
+          "unique_values": 47955,
+          "sample": "@GRH"
+        },
+        "ISSN": {
+          "completeness": "87.8%",
+          "unique_values": 42265,
+          "sample": "20349130"
+        },
+        "EISSN": {
+          "completeness": "63.6%",
+          "unique_values": 30637,
+          "sample": "22959149"
+        },
+        "Active or Inactive": {
+          "completeness": "100.0%",
+          "unique_values": 2,
+          "sample": "Active"
+        },
+        "Coverage": {
+          "completeness": "100.0%",
+          "unique_values": 14477,
+          "sample": "2023-2024"
+        },
+        "Titles Discontinued by Scopus": {
+          "completeness": "1.9%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "Article Language in Source (Three-Letter ISO Language Codes)": {
+          "completeness": "86.7%",
+          "unique_values": 332,
+          "sample": "ENG; FRE"
+        },
+        "Medline-sourced Title? (See additional details under separate tab.)": {
+          "completeness": "10.4%",
+          "unique_values": 2,
+          "sample": "nan"
+        },
+        "Open Access Status": {
+          "completeness": "18.6%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "Articles in Press Included?": {
+          "completeness": "21.1%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "Added to List Jan. 2026": {
+          "completeness": "0.1%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "Source Type": {
+          "completeness": "100.0%",
+          "unique_values": 3,
+          "sample": "Journal"
+        },
+        "Title History Indication": {
+          "completeness": "26.5%",
+          "unique_values": 7,
+          "sample": "nan"
+        },
+        "Related Title 1": {
+          "completeness": "26.5%",
+          "unique_values": 11098,
+          "sample": "nan"
+        },
+        "Other Related Title 2": {
+          "completeness": "4.4%",
+          "unique_values": 1995,
+          "sample": "nan"
+        },
+        "Other Related Title 3": {
+          "completeness": "0.4%",
+          "unique_values": 207,
+          "sample": "nan"
+        },
+        "Other Related Title 4": {
+          "completeness": "0.1%",
+          "unique_values": 41,
+          "sample": "nan"
+        },
+        "Publisher": {
+          "completeness": "99.9%",
+          "unique_values": 14215,
+          "sample": "Association Francophone de Gestion des Relations Humaines"
+        },
+        "Publisher Imprints Grouped to Main Publisher": {
+          "completeness": "99.9%",
+          "unique_values": 13871,
+          "sample": "Association Francophone de Gestion des Relations Humaines"
+        },
+        "All Science Journal Classification Codes (ASJC)": {
+          "completeness": "99.8%",
+          "unique_values": 17311,
+          "sample": "1407"
+        },
+        "Top level:\n\nLife Sciences": {
+          "completeness": "18.0%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "Top level:\n\nSocial Sciences": {
+          "completeness": "35.2%",
+          "unique_values": 1,
+          "sample": "Social Sciences"
+        },
+        "Top level:\n\nPhysical Sciences": {
+          "completeness": "33.6%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "Top level:\n\nHealth Sciences": {
+          "completeness": "32.8%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1000 \nGeneral": {
+          "completeness": "0.5%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1100\nAgricultural and Biological Sciences": {
+          "completeness": "7.3%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1200\nArts and Humanities": {
+          "completeness": "14.1%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1300\nBiochemistry, Genetics and Molecular Biology": {
+          "completeness": "7.1%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1400\nBusiness, Management and Accounting": {
+          "completeness": "4.9%",
+          "unique_values": 1,
+          "sample": "Business, Management and Accounting "
+        },
+        "1500\nChemical Engineering": {
+          "completeness": "2.4%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1600\nChemistry": {
+          "completeness": "3.2%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1700\nComputer Science": {
+          "completeness": "5.9%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1800\nDecision Sciences": {
+          "completeness": "1.4%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "1900\nEarth and Planetary Sciences": {
+          "completeness": "5.1%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2000\nEconomics, Econometrics and Finance": {
+          "completeness": "3.4%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2100\nEnergy": {
+          "completeness": "2.1%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2200\nEngineering": {
+          "completeness": "12.7%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2300\nEnvironmental Science": {
+          "completeness": "6.4%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2400\nImmunology and Microbiology": {
+          "completeness": "2.2%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2500\nMaterials Science": {
+          "completeness": "4.7%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2600\nMathematics": {
+          "completeness": "4.8%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2700\nMedicine": {
+          "completeness": "30.1%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2800\nNeuroscience": {
+          "completeness": "1.9%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "2900\nNursing": {
+          "completeness": "2.3%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "3000\nPharmacology, Toxicology and Pharmaceutics": {
+          "completeness": "2.8%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "3100\nPhysics and Astronomy": {
+          "completeness": "3.6%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "3200\nPsychology": {
+          "completeness": "3.6%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "3300\nSocial Sciences": {
+          "completeness": "22.2%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "3400\nVeterinary": {
+          "completeness": "0.8%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "3500\nDentistry": {
+          "completeness": "0.8%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "3600\nHealth Professions": {
+          "completeness": "1.9%",
+          "unique_values": 1,
+          "sample": "nan"
+        }
+      }
+    },
+    "Accepted Titles Jan. 2026": {
+      "name": "Accepted Titles Jan. 2026",
+      "index": 2,
+      "record_count": 442,
+      "column_count": 5,
+      "columns": [
+        "Status: January 2026",
+        "Accepted titles in the process of being added to Scopus",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4"
+      ],
+      "detected_type": "unknown",
+      "sample_data": [
+        {
+          "Status: January 2026": "Notice: Scopus is owned by Elsevier B.V. and Elsevier is solely responsible for the content selectio",
+          "Accepted titles in the process of being added to Scopus": "",
+          "Unnamed: 2": "",
+          "Unnamed: 3": "",
+          "Unnamed: 4": ""
+        },
+        {
+          "Status: January 2026": "Source Title",
+          "Accepted titles in the process of being added to Scopus": "ISSN",
+          "Unnamed: 2": "EISSN",
+          "Unnamed: 3": "Date of Acceptance",
+          "Unnamed: 4": "Publisher"
+        },
+        {
+          "Status: January 2026": "Environmental Sustainability",
+          "Accepted titles in the process of being added to Scopus": "",
+          "Unnamed: 2": "25238922",
+          "Unnamed: 3": "2026-01-04 22:36:00",
+          "Unnamed: 4": "Springer"
+        }
+      ],
+      "key_columns": {
+        "title": [
+          "Accepted titles in the process of being added to Scopus",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4"
+        ],
+        "id": [
+          "Accepted titles in the process of being added to Scopus"
+        ],
+        "issn": [],
+        "publisher": [],
+        "status": [
+          "Status: January 2026"
+        ],
+        "coverage": [],
+        "asjc": [],
+        "oa": []
+      },
+      "statistics": {
+        "Status: January 2026": {
+          "completeness": "100.0%",
+          "unique_values": 442,
+          "sample": "Notice: Scopus is owned by Elsevier B.V. and Elsevier is solely responsible for the content selectio"
+        },
+        "Accepted titles in the process of being added to Scopus": {
+          "completeness": "90.7%",
+          "unique_values": 401,
+          "sample": "nan"
+        },
+        "Unnamed: 2": {
+          "completeness": "62.7%",
+          "unique_values": 276,
+          "sample": "nan"
+        },
+        "Unnamed: 3": {
+          "completeness": "99.8%",
+          "unique_values": 309,
+          "sample": "nan"
+        },
+        "Unnamed: 4": {
+          "completeness": "99.8%",
+          "unique_values": 123,
+          "sample": "nan"
+        }
+      }
+    },
+    "Discontinued Titles Jan. 2026": {
+      "name": "Discontinued Titles Jan. 2026",
+      "index": 3,
+      "record_count": 1102,
+      "column_count": 10,
+      "columns": [
+        "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold.",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "detected_type": "unknown",
+      "sample_data": [
+        {
+          "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)": "Sourcerecord ID",
+          "Unnamed: 1": "Source Title (newly added titles are highlighted in red)",
+          "Unnamed: 2": "ISSN",
+          "Unnamed: 3": "EISSN",
+          "Unnamed: 4": "Publisher",
+          "Unnamed: 5": "Indexation Change",
+          "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold.": "Year",
+          "Unnamed: 7": "Volume",
+          "Unnamed: 8": "Issue",
+          "Unnamed: 9": "Page Range"
+        },
+        {
+          "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)": "18665",
+          "Unnamed: 1": "ABB Review",
+          "Unnamed: 2": "10133119",
+          "Unnamed: 3": "",
+          "Unnamed: 4": "A B B Corporate Management Services AG",
+          "Unnamed: 5": "Discontinuation",
+          "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold.": "2018",
+          "Unnamed: 7": "",
+          "Unnamed: 8": "4",
+          "Unnamed: 9": "76-77"
+        },
+        {
+          "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)": "19700182619",
+          "Unnamed: 1": "Academic Journal of Cancer Research",
+          "Unnamed: 2": "19958943",
+          "Unnamed: 3": "",
+          "Unnamed: 4": "International Digital Organization for Scientific Information (IDOSI)",
+          "Unnamed: 5": "Discontinuation",
+          "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold.": "2013",
+          "Unnamed: 7": "6",
+          "Unnamed: 8": "2",
+          "Unnamed: 9": "84-89"
+        }
+      ],
+      "key_columns": {
+        "title": [
+          "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5",
+          "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold.",
+          "Unnamed: 7",
+          "Unnamed: 8",
+          "Unnamed: 9"
+        ],
+        "id": [
+          "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)",
+          "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold."
+        ],
+        "issn": [],
+        "publisher": [],
+        "status": [
+          "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)"
+        ],
+        "coverage": [
+          "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold."
+        ],
+        "asjc": [],
+        "oa": []
+      },
+      "statistics": {
+        "Status (recently discontinued titles in bold): January 2026 (more information on Scopus Re-evaluation)": {
+          "completeness": "99.7%",
+          "unique_values": 1087,
+          "sample": "Sourcerecord ID"
+        },
+        "Unnamed: 1": {
+          "completeness": "100.0%",
+          "unique_values": 1097,
+          "sample": "Source Title (newly added titles are highlighted in red)"
+        },
+        "Unnamed: 2": {
+          "completeness": "74.9%",
+          "unique_values": 819,
+          "sample": "ISSN"
+        },
+        "Unnamed: 3": {
+          "completeness": "73.3%",
+          "unique_values": 799,
+          "sample": "EISSN"
+        },
+        "Unnamed: 4": {
+          "completeness": "100.0%",
+          "unique_values": 716,
+          "sample": "Publisher"
+        },
+        "Unnamed: 5": {
+          "completeness": "100.0%",
+          "unique_values": 3,
+          "sample": "Indexation Change"
+        },
+        "FINAL COVERAGE\nDisclaimer: Final coverage indicates the last complete volume/issue covered in Scopus.com. After this, no content will be added. No gap fill will be done unless it can be proven that the article was published in one of the issues before the indicated final coverage vol/issue and it was available online before the title was put on hold.": {
+          "completeness": "99.2%",
+          "unique_values": 21,
+          "sample": "Year"
+        },
+        "Unnamed: 7": {
+          "completeness": "97.7%",
+          "unique_values": 138,
+          "sample": "Volume"
+        },
+        "Unnamed: 8": {
+          "completeness": "95.1%",
+          "unique_values": 101,
+          "sample": "Issue"
+        },
+        "Unnamed: 9": {
+          "completeness": "98.2%",
+          "unique_values": 962,
+          "sample": "Page Range"
+        }
+      }
+    },
+    "Serial Conf. Proc. with Profile": {
+      "name": "Serial Conf. Proc. with Profile",
+      "index": 4,
+      "record_count": 1210,
+      "column_count": 7,
+      "columns": [
+        "Sourcerecord ID",
+        "Source Title",
+        "ISSN",
+        "EISSN",
+        "Titles Discontinued by Scopus",
+        "Coverage",
+        "All Science Journal Classification Codes (ASJC)"
+      ],
+      "detected_type": "conferences",
+      "sample_data": [
+        {
+          "Sourcerecord ID": "101076",
+          "Source Title": "2000 IEEE Wireless Communications and Networking Conference",
+          "ISSN": "",
+          "EISSN": "",
+          "Titles Discontinued by Scopus": "",
+          "Coverage": "2002; 2000",
+          "All Science Journal Classification Codes (ASJC)": "2200"
+        },
+        {
+          "Sourcerecord ID": "21100225802",
+          "Source Title": "3DTV-Conference",
+          "ISSN": "21612021",
+          "EISSN": "2161203X",
+          "Titles Discontinued by Scopus": "",
+          "Coverage": "2018; 2012-2016",
+          "All Science Journal Classification Codes (ASJC)": "2208; 1709; 1707; 1705; 1704"
+        },
+        {
+          "Sourcerecord ID": "78851",
+          "Source Title": "4th International Conference COPPER 99-COBRE 99",
+          "ISSN": "",
+          "EISSN": "",
+          "Titles Discontinued by Scopus": "",
+          "Coverage": "2002; 1999",
+          "All Science Journal Classification Codes (ASJC)": "2200"
+        }
+      ],
+      "key_columns": {
+        "title": [
+          "Sourcerecord ID",
+          "Source Title",
+          "Titles Discontinued by Scopus",
+          "All Science Journal Classification Codes (ASJC)"
+        ],
+        "id": [
+          "Sourcerecord ID",
+          "Titles Discontinued by Scopus"
+        ],
+        "issn": [
+          "ISSN",
+          "EISSN"
+        ],
+        "publisher": [],
+        "status": [
+          "Titles Discontinued by Scopus"
+        ],
+        "coverage": [
+          "Coverage"
+        ],
+        "asjc": [
+          "All Science Journal Classification Codes (ASJC)"
+        ],
+        "oa": []
+      },
+      "statistics": {
+        "Sourcerecord ID": {
+          "completeness": "100.0%",
+          "unique_values": 1210,
+          "sample": "101076"
+        },
+        "Source Title": {
+          "completeness": "100.0%",
+          "unique_values": 1196,
+          "sample": "2000 IEEE Wireless Communications and Networking Conference"
+        },
+        "ISSN": {
+          "completeness": "70.7%",
+          "unique_values": 843,
+          "sample": "nan"
+        },
+        "EISSN": {
+          "completeness": "45.5%",
+          "unique_values": 543,
+          "sample": "nan"
+        },
+        "Titles Discontinued by Scopus": {
+          "completeness": "0.6%",
+          "unique_values": 1,
+          "sample": "nan"
+        },
+        "Coverage": {
+          "completeness": "100.0%",
+          "unique_values": 929,
+          "sample": "2002; 2000"
+        },
+        "All Science Journal Classification Codes (ASJC)": {
+          "completeness": "100.0%",
+          "unique_values": 767,
+          "sample": "2200"
+        }
+      }
+    },
+    "All Conf. Proceedings Jun. 2025": {
+      "name": "All Conf. Proceedings Jun. 2025",
+      "index": 5,
+      "record_count": 171154,
+      "column_count": 5,
+      "columns": [
+        "Title",
+        "Source Title",
+        "Year",
+        "Volume",
+        "EID"
+      ],
+      "detected_type": "conferences",
+      "sample_data": [
+        {
+          "Title": "#MSM 2011 - Proceedings of the Workshop on 'Making Sense of Microposts 2011': Big Things Come in Sma",
+          "Source Title": "CEUR Workshop Proceedings",
+          "Year": "2011",
+          "Volume": "718",
+          "EID": "84891908414"
+        },
+        {
+          "Title": "#MSM 2012 - Proceedings of the WWW 2012 Workshop on 'Making Sense of Microposts'",
+          "Source Title": "CEUR Workshop Proceedings",
+          "Year": "2012",
+          "Volume": "838",
+          "EID": "84891947211"
+        },
+        {
+          "Title": "(ECOOP'99)European Conference on Object-Oriented Programming",
+          "Source Title": "Concurrency Practice and Experience",
+          "Year": "2000",
+          "Volume": "12",
+          "EID": "0034360334"
+        }
+      ],
+      "key_columns": {
+        "title": [
+          "Title",
+          "Source Title"
+        ],
+        "id": [
+          "EID"
+        ],
+        "issn": [],
+        "publisher": [],
+        "status": [],
+        "coverage": [],
+        "asjc": [],
+        "oa": []
+      },
+      "statistics": {
+        "Title": {
+          "completeness": "100.0%",
+          "unique_values": 143155,
+          "sample": "#MSM 2011 - Proceedings of the Workshop on 'Making Sense of Microposts 2011': Big Things Come in Sma"
+        },
+        "Source Title": {
+          "completeness": "98.0%",
+          "unique_values": 54192,
+          "sample": "CEUR Workshop Proceedings"
+        },
+        "Year": {
+          "completeness": "100.0%",
+          "unique_values": 96,
+          "sample": "2011"
+        },
+        "Volume": {
+          "completeness": "58.0%",
+          "unique_values": 18815,
+          "sample": "718"
+        },
+        "EID": {
+          "completeness": "100.0%",
+          "unique_values": 171140,
+          "sample": "84891908414"
+        }
+      }
+    },
+    "More Info. Medline": {
+      "name": "More Info. Medline",
+      "index": 6,
+      "record_count": 14,
+      "column_count": 1,
+      "columns": [
+        "Display Rules and Regulations"
+      ],
+      "detected_type": "medline_info",
+      "sample_data": [
+        {
+          "Display Rules and Regulations": ""
+        },
+        {
+          "Display Rules and Regulations": "The Scopus Source List contains over 40,000 serial titles, however, there are actually in total more"
+        },
+        {
+          "Display Rules and Regulations": "The Reasons for leaving circa 10,000 serial titles out of the list and out of the Scopus Source Brow"
+        }
+      ],
+      "key_columns": {
+        "title": [],
+        "id": [],
+        "issn": [],
+        "publisher": [],
+        "status": [],
+        "coverage": [],
+        "asjc": [],
+        "oa": []
+      },
+      "statistics": {
+        "Display Rules and Regulations": {
+          "completeness": "64.3%",
+          "unique_values": 9,
+          "sample": "nan"
+        }
+      }
+    },
+    "ASJC Classification Codes": {
+      "name": "ASJC Classification Codes",
+      "index": 7,
+      "record_count": 369,
+      "column_count": 6,
+      "columns": [
+        "Regarding **00 and **01:",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5"
+      ],
+      "detected_type": "classification",
+      "sample_data": [
+        {
+          "Regarding **00 and **01:": "When the scope of a journal covers all or most of the sub-codes belonging to a main code the **00 co",
+          "Unnamed: 1": "",
+          "Unnamed: 2": "",
+          "Unnamed: 3": "",
+          "Unnamed: 4": "",
+          "Unnamed: 5": ""
+        },
+        {
+          "Regarding **00 and **01:": "Normally, journals with code **00 should not get additional sub-codes within this main code range bu",
+          "Unnamed: 1": "",
+          "Unnamed: 2": "",
+          "Unnamed: 3": "",
+          "Unnamed: 4": "",
+          "Unnamed: 5": ""
+        },
+        {
+          "Regarding **00 and **01:": "The code 1000 should be reserved for “all science” titles like Nature or Science, covering all or mo",
+          "Unnamed: 1": "",
+          "Unnamed: 2": "",
+          "Unnamed: 3": "",
+          "Unnamed: 4": "",
+          "Unnamed: 5": ""
+        }
+      ],
+      "key_columns": {
+        "title": [
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5"
+        ],
+        "id": [],
+        "issn": [],
+        "publisher": [],
+        "status": [],
+        "coverage": [],
+        "asjc": [],
+        "oa": []
+      },
+      "statistics": {
+        "Regarding **00 and **01:": {
+          "completeness": "92.1%",
+          "unique_values": 340,
+          "sample": "When the scope of a journal covers all or most of the sub-codes belonging to a main code the **00 co"
+        },
+        "Unnamed: 1": {
+          "completeness": "98.1%",
+          "unique_values": 360,
+          "sample": "nan"
+        },
+        "Unnamed: 2": {
+          "completeness": "0.0%",
+          "unique_values": 0,
+          "sample": "nan"
+        },
+        "Unnamed: 3": {
+          "completeness": "7.6%",
+          "unique_values": 28,
+          "sample": "nan"
+        },
+        "Unnamed: 4": {
+          "completeness": "7.6%",
+          "unique_values": 28,
+          "sample": "nan"
+        },
+        "Unnamed: 5": {
+          "completeness": "7.3%",
+          "unique_values": 5,
+          "sample": "nan"
+        }
+      }
+    }
+  },
+  "statistics": {
+    "total_records": 222442,
+    "estimated_journals": 48151,
+    "estimated_conferences": 172364,
+    "estimated_discontinued": 0
+  },
+  "patterns": {
+    "has_issn": true,
+    "has_asjc": true,
+    "has_coverage": true,
+    "has_open_access": true,
+    "has_publisher": true
+  }
+}

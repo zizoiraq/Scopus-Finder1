@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopus Finder 2026 - البحث الشامل</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: #2a5298;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+
+        .logo-text span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .university-info {
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecf2 100%);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 2px solid #2a5298;
+        }
+
+        .university-info .main {
+            font-weight: 700;
+            color: #1e3c72;
+            font-size: 1.1rem;
+        }
+
+        .university-info .department {
+            font-size: 0.9rem;
+            color: #2a5298;
+            font-weight: 600;
+        }
+
+        .university-info .designer {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.2rem;
+        }
+
+        .main-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* تحسينات سرعة التحميل */
+        .progress-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2a5298, #1e3c72);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .progress-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .progress-speed {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .progress-percent {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+
+        .cache-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            color: #2a5298;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .search-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-input-wrapper i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        #searchBtn {
+            background: #2a5298;
+            color: white;
+            border: none;
+            padding: 0 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        #searchBtn:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+        }
+
+        .search-type-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .search-type-tab {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .search-type-tab.active {
+            background: #2a5298;
+            color: white;
+        }
+
+        .search-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            color: white;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .results-count {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .search-time {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .journals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .journal-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-right: 4px solid #2a5298;
+        }
+
+        .journal-card.conference {
+            border-right-color: #28a745;
+        }
+
+        .journal-card.discontinued {
+            border-right-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .journal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .journal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .journal-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e3c72;
+            flex: 1;
+        }
+
+        .journal-type {
+            padding: 0.2rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .type-journal {
+            background: #e3f2fd;
+            color: #0d47a1;
+        }
+
+        .type-conference {
+            background: #e8f5e9;
+            color: #1b5e20;
+        }
+
+        .type-discontinued {
+            background: #ffebee;
+            color: #b71c1c;
+        }
+
+        .journal-ids {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .journal-ids span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .journal-publisher {
+            color: #666;
+            margin: 0.5rem 0;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .journal-coverage {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .coverage-badge {
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .asjc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin: 0.8rem 0;
+        }
+
+        .asjc-code {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .journal-footer {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .btn-primary {
+            background: #2a5298;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1e3c72;
+        }
+
+        .btn-outline {
+            background: white;
+            border: 2px solid #2a5298;
+            color: #2a5298;
+        }
+
+        .btn-outline:hover {
+            background: #2a5298;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h2 {
+            color: #1e3c72;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            width: 200px;
+            color: #1e3c72;
+        }
+
+        .detail-value {
+            flex: 1;
+            color: #666;
+        }
+
+        .no-results {
+            grid-column: 1/-1;
+            text-align: center;
+            padding: 3rem;
+            background: white;
+            border-radius: 15px;
+        }
+
+        .footer {
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #2a5298;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            .journals-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <div class="logo-text">
+                    <h1>Scopus Finder 2026</h1>
+                    <span>الباحث الشامل في مجلات ومؤتمرات سكوباس</span>
+                </div>
+            </div>
+            
+            <div class="university-info">
+                <div class="main">الجامعة التقنية الشمالية</div>
+                <div class="department">الكلية التقنية الهندسية - الموصل</div>
+                <div class="department">تقنيات هندسة الصناعات الكيمياوية والنفطية</div>
+                <div class="designer">تصميم: عزام عصام</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- شاشة التحميل مع مؤشر التقدم -->
+        <div class="progress-container" id="loadingScreen">
+            <i class="fas fa-database" style="font-size: 3rem; color: #2a5298; margin-bottom: 1rem;"></i>
+            <h2 id="loadingTitle">جاري تجهيز قاعدة البيانات</h2>
+            <p id="loadingSubtitle">الرجاء الانتظار قليلاً...</p>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBar"></div>
+            </div>
+            
+            <div class="progress-status">
+                <div class="progress-percent" id="progressPercent">0%</div>
+                <div class="progress-speed" id="progressSpeed"></div>
+            </div>
+            
+            <div class="stats-grid" id="loadingStats" style="display: none;">
+                <div class="stat-card">
+                    <i class="fas fa-book"></i>
+                    <div class="stat-number" id="statJournals">0</div>
+                    <div class="stat-label">مجلة</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number" id="statConferences">0</div>
+                    <div class="stat-label">مؤتمر</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-ban"></i>
+                    <div class="stat-number" id="statDiscontinued">0</div>
+                    <div class="stat-label">متوقفة</div>
+                </div>
+            </div>
+
+            <div id="cacheMessage" style="margin-top: 1rem; display: none;">
+                <span class="cache-indicator">
+                    <i class="fas fa-bolt"></i> التحميل من الذاكرة المخبأة للزيارة القادمة سيكون أسرع!
+                </span>
+            </div>
+        </div>
+
+        <!-- قسم البحث (يظهر بعد التحميل) -->
+        <div id="searchSection" style="display: none;">
+            <div class="search-section">
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="ابحث باسم المجلة، المؤتمر، ISSN، EISSN، الناشر، أو أي كلمة...">
+                    </div>
+                    <button id="searchBtn"><i class="fas fa-search"></i> بحث</button>
+                </div>
+
+                <div class="search-type-tabs">
+                    <button class="search-type-tab active" data-type="all">📋 الكل</button>
+                    <button class="search-type-tab" data-type="journals">📚 مجلات</button>
+                    <button class="search-type-tab" data-type="conferences">🎤 مؤتمرات</button>
+                    <button class="search-type-tab" data-type="discontinued">⚠️ المتوقفة</button>
+                </div>
+            </div>
+
+            <div class="search-stats">
+                <div class="results-count" id="resultsCount">جاري البحث...</div>
+                <div class="search-time" id="searchTime"></div>
+            </div>
+
+            <div class="journals-grid" id="journalsGrid"></div>
+        </div>
+    </div>
+
+    <!-- نافذة التفاصيل -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-info-circle"></i> تفاصيل كاملة</h2>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>جميع البيانات مأخوذة من قاعدة Scopus الرسمية - تحديث يناير 2026</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">© 2026 Scopus Finder - بحث شامل في كل المصادر</p>
+    </footer>
+
+    <script>
+        // رابط Google Drive المباشر (تم تعديله)
+        const DATA_URL = 'https://drive.google.com/uc?export=download&id=12_A-0GAQ2sNxEimmfU-_gGKZZk21c-0w';
+        
+        // متغيرات عامة
+        let allData = null;
+        let searchResults = [];
+        let currentType = 'all';
+        let isLoading = false;
+        
+        // عناصر DOM
+        const loadingScreen = document.getElementById('loadingScreen');
+        const searchSection = document.getElementById('searchSection');
+        const progressBar = document.getElementById('progressBar');
+        const progressPercent = document.getElementById('progressPercent');
+        const progressSpeed = document.getElementById('progressSpeed');
+        const loadingTitle = document.getElementById('loadingTitle');
+        const loadingSubtitle = document.getElementById('loadingSubtitle');
+        const loadingStats = document.getElementById('loadingStats');
+        const cacheMessage = document.getElementById('cacheMessage');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const resultsCount = document.getElementById('resultsCount');
+        const searchTime = document.getElementById('searchTime');
+        const journalsGrid = document.getElementById('journalsGrid');
+        
+        // التحقق من وجود البيانات في localStorage
+        function checkLocalCache() {
+            try {
+                const cached = localStorage.getItem('scopusData');
+                const cacheTime = localStorage.getItem('scopusDataTime');
+                
+                if (cached && cacheTime) {
+                    const now = new Date().getTime();
+                    const hoursPassed = (now - parseInt(cacheTime)) / (1000 * 60 * 60);
+                    
+                    // إذا كان التخزين أقل من 24 ساعة
+                    if (hoursPassed < 24) {
+                        return JSON.parse(cached);
+                    }
+                }
+            } catch (e) {
+                console.log('خطأ في قراءة الكاش:', e);
+            }
+            return null;
+        }
+        
+        // حفظ في localStorage
+        function saveToCache(data) {
+            try {
+                // محاولة حفظ البيانات الأساسية فقط لتقليل الحجم
+                const summary = {
+                    totalJournals: data.data?.["Scopus Sources Jan. 2026"]?.records?.length || 0,
+                    totalConferences: data.data?.["All Conf. Proceedings Jun. 2025"]?.records?.length || 0,
+                    totalDiscontinued: data.data?.["Discontinued Titles Jan. 2026"]?.records?.length || 0
+                };
+                
+                localStorage.setItem('scopusSummary', JSON.stringify(summary));
+                localStorage.setItem('scopusDataTime', new Date().getTime().toString());
+                
+                // عرض رسالة الكاش
+                cacheMessage.style.display = 'block';
+            } catch (e) {
+                console.log('لا يمكن حفظ الكاش (قد يكون الملف كبيراً)');
+            }
+        }
+        
+        // تحميل البيانات مع مؤشر التقدم
+        async function loadData() {
+            try {
+                // التحقق من الكاش أولاً
+                const cached = checkLocalCache();
+                if (cached) {
+                    allData = cached;
+                    showSearchInterface();
+                    updateStatsFromData();
+                    return;
+                }
+                
+                // بدء التحميل
+                const response = await fetch(DATA_URL);
+                
+                if (!response.ok) {
+                    throw new Error('فشل في تحميل البيانات');
+                }
+                
+                // قراءة حجم المحتوى
+                const contentLength = response.headers.get('content-length');
+                const totalSize = contentLength ? parseInt(contentLength) : 0;
+                
+                const reader = response.body.getReader();
+                const chunks = [];
+                let receivedLength = 0;
+                let startTime = Date.now();
+                
+                loadingTitle.textContent = 'جاري تحميل قاعدة البيانات الكبيرة';
+                loadingSubtitle.textContent = 'الرجاء الانتظار، هذا قد يستغرق دقيقة...';
+                
+                while (true) {
+                    const { done, value } = await reader.read();
+                    
+                    if (done) break;
+                    
+                    chunks.push(value);
+                    receivedLength += value.length;
+                    
+                    // حساب التقدم
+                    if (totalSize > 0) {
+                        const percent = (receivedLength / totalSize * 100).toFixed(1);
+                        progressBar.style.width = percent + '%';
+                        progressPercent.textContent = percent + '%';
+                        
+                        // حساب السرعة
+                        const elapsed = (Date.now() - startTime) / 1000;
+                        const speed = (receivedLength / (1024 * 1024) / elapsed).toFixed(1);
+                        progressSpeed.textContent = `📊 ${(receivedLength / (1024 * 1024)).toFixed(1)} MB / ${speed} MB/s`;
+                    }
+                }
+                
+                // تحويل البيانات
+                const chunksAll = new Uint8Array(receivedLength);
+                let position = 0;
+                for (let chunk of chunks) {
+                    chunksAll.set(chunk, position);
+                    position += chunk.length;
+                }
+                
+                const jsonString = new TextDecoder('utf-8').decode(chunksAll);
+                allData = JSON.parse(jsonString);
+                
+                // حفظ في الكاش
+                saveToCache(allData);
+                
+                // إظهار واجهة البحث
+                showSearchInterface();
+                updateStatsFromData();
+                
+            } catch (error) {
+                console.error('خطأ:', error);
+                loadingTitle.textContent = 'حدث خطأ في التحميل';
+                loadingSubtitle.textContent = 'الرجاء تحديث الصفحة والمحاولة مرة أخرى';
+            }
+        }
+        
+        // إظهار واجهة البحث
+        function showSearchInterface() {
+            loadingScreen.style.display = 'none';
+            searchSection.style.display = 'block';
+            
+            // عرض إحصائيات سريعة
+            loadingStats.style.display = 'grid';
+            
+            // عرض أول 20 نتيجة
+            performSearch();
+        }
+        
+        // تحديث الإحصائيات من البيانات
+        function updateStatsFromData() {
+            if (!allData) return;
+            
+            const mainJournals = allData.data?.["Scopus Sources Jan. 2026"]?.records || [];
+            const conferences = allData.data?.["All Conf. Proceedings Jun. 2025"]?.records || [];
+            const discontinued = allData.data?.["Discontinued Titles Jan. 2026"]?.records || [];
+            
+            document.getElementById('statJournals').textContent = mainJournals.length.toLocaleString();
+            document.getElementById('statConferences').textContent = conferences.length.toLocaleString();
+            document.getElementById('statDiscontinued').textContent = discontinued.length.toLocaleString();
+        }
+        
+        // دالة البحث المحسنة (تفحص كل شئ)
+        function performSearch() {
+            if (!allData) return;
+            
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            const startTime = performance.now();
+            
+            // تجميع كل السجلات من جميع الشيتات
+            let allRecords = [];
+            
+            // 1. المجلات الرئيسية
+            const journals = allData.data?.["Scopus Sources Jan. 2026"]?.records || [];
+            journals.forEach(j => {
+                allRecords.push({
+                    ...j,
+                    _type: 'journal',
+                    _sourceSheet: 'Scopus Sources Jan. 2026'
+                });
+            });
+            
+            // 2. المؤتمرات (كل وقائع المؤتمرات)
+            const conferences = allData.data?.["All Conf. Proceedings Jun. 2025"]?.records || [];
+            conferences.forEach(c => {
+                allRecords.push({
+                    ...c,
+                    _type: 'conference',
+                    _sourceSheet: 'All Conf. Proceedings Jun. 2025'
+                });
+            });
+            
+            // 3. المؤتمرات المسلسلة
+            const serialConf = allData.data?.["Serial Conf. Proc. with Profile"]?.records || [];
+            serialConf.forEach(c => {
+                allRecords.push({
+                    ...c,
+                    _type: 'conference',
+                    _sourceSheet: 'Serial Conf. Proc. with Profile'
+                });
+            });
+            
+            // 4. المجلات المتوقفة
+            const discontinued = allData.data?.["Discontinued Titles Jan. 2026"]?.records || [];
+            discontinued.forEach(d => {
+                allRecords.push({
+                    ...d,
+                    _type: 'discontinued',
+                    _sourceSheet: 'Discontinued Titles Jan. 2026'
+                });
+            });
+            
+            // 5. المجلات المقبولة
+            const accepted = allData.data?.["Accepted Titles Jan. 2026"]?.records || [];
+            accepted.forEach(a => {
+                allRecords.push({
+                    ...a,
+                    _type: 'accepted',
+                    _sourceSheet: 'Accepted Titles Jan. 2026'
+                });
+            });
+            
+            // تصفية حسب نوع البحث
+            let filtered = allRecords;
+            if (currentType !== 'all') {
+                filtered = filtered.filter(r => r._type === currentType);
+            }
+            
+            // تطبيق البحث النصي
+            if (searchTerm.length > 0) {
+                filtered = filtered.filter(record => {
+                    // تحويل كل القيم في السجل إلى نص والبحث فيها
+                    return Object.values(record).some(value => {
+                        if (value && typeof value === 'string') {
+                            return value.toLowerCase().includes(searchTerm);
+                        }
+                        return false;
+                    });
+                });
+            } else {
+                // إذا كان البحث فارغاً، نعرض آخر 100 نتيجة فقط
+                filtered = filtered.slice(0, 100);
+            }
+            
+            searchResults = filtered;
+            
+            // حساب وقت البحث
+            const endTime = performance.now();
+            const timeMs = (endTime - startTime).toFixed(0);
+            
+            // عرض النتائج
+            displayResults(searchResults, searchTerm, timeMs);
+        }
+        
+        // عرض النتائج
+        function displayResults(results, searchTerm, timeMs) {
+            if (results.length === 0) {
+                journalsGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search" style="font-size: 3rem; color: #ccc;"></i>
+                        <h3 style="margin: 1rem 0;">لا توجد نتائج</h3>
+                        <p>لم يتم العثور على "${searchTerm}" في أي من المصادر</p>
+                    </div>
+                `;
+            } else {
+                let html = '';
+                const displayResults = results.slice(0, 50); // عرض أول 50 نتيجة فقط للسرعة
+                
+                displayResults.forEach(record => {
+                    const typeClass = {
+                        'journal': 'type-journal',
+                        'conference': 'type-conference',
+                        'discontinued': 'type-discontinued',
+                        'accepted': 'type-journal'
+                    }[record._type] || 'type-journal';
+                    
+                    const typeName = {
+                        'journal': '📚 مجلة',
+                        'conference': '🎤 مؤتمر',
+                        'discontinued': '⚠️ متوقفة',
+                        'accepted': '🆕 مقبولة'
+                    }[record._type] || record._type;
+                    
+                    // محاولة استخراج العنوان من الحقول المختلفة
+                    const title = record['Source Title'] || record['Title'] || record['title'] || 'بدون عنوان';
+                    const issn = record['ISSN'] || record['issn'] || '';
+                    const eissn = record['EISSN'] || record['eissn'] || '';
+                    const publisher = record['Publisher'] || record['publisher'] || '';
+                    const coverage = record['Coverage'] || record['coverage'] || '';
+                    
+                    html += `
+                        <div class="journal-card ${record._type === 'conference' ? 'conference' : (record._type === 'discontinued' ? 'discontinued' : '')}">
+                            <div class="journal-header">
+                                <div class="journal-title">${title}</div>
+                                <span class="journal-type ${typeClass}">${typeName}</span>
+                            </div>
+                            
+                            <div class="journal-ids">
+                                ${issn ? `<span><i class="fas fa-barcode"></i> ISSN: ${issn}</span>` : ''}
+                                ${eissn ? `<span><i class="fas fa-qrcode"></i> EISSN: ${eissn}</span>` : ''}
+                            </div>
+                            
+                            ${publisher ? `
+                                <div class="journal-publisher">
+                                    <i class="fas fa-building"></i> ${publisher}
+                                </div>
+                            ` : ''}
+                            
+                            ${coverage ? `
+                                <div class="journal-coverage">
+                                    <i class="fas fa-calendar"></i> ${coverage}
+                                </div>
+                            ` : ''}
+                            
+                            <div class="journal-footer">
+                                <button class="btn btn-primary" onclick="showDetails('${encodeURIComponent(JSON.stringify(record))}')">
+                                    <i class="fas fa-info-circle"></i> تفاصيل
+                                </button>
+                                <button class="btn btn-outline" onclick="copyInfo('${encodeURIComponent(JSON.stringify(record))}')">
+                                    <i class="fas fa-copy"></i> نسخ
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                journalsGrid.innerHTML = html;
+            }
+            
+            // تحديث إحصائيات البحث
+            resultsCount.innerHTML = `
+                <i class="fas fa-list"></i>
+                عرض ${Math.min(results.length, 50)} من ${results.length.toLocaleString()} نتيجة
+                ${searchTerm ? `للبحث "${searchTerm}"` : ''}
+            `;
+            
+            searchTime.innerHTML = `<i class="fas fa-clock"></i> ${timeMs} مللي ثانية`;
+        }
+        
+        // إظهار التفاصيل
+        window.showDetails = function(encodedRecord) {
+            const record = JSON.parse(decodeURIComponent(encodedRecord));
+            const modal = document.getElementById('detailsModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            let html = '';
+            for (let [key, value] of Object.entries(record)) {
+                if (value && key !== '_type' && key !== '_sourceSheet') {
+                    html += `
+                        <div class="detail-row">
+                            <div class="detail-label">${key}</div>
+                            <div class="detail-value">${value}</div>
+                        </div>
+                    `;
+                }
+            }
+            
+            modalContent.innerHTML = html;
+            modal.classList.add('active');
+        };
+        
+        // نسخ المعلومات
+        window.copyInfo = function(encodedRecord) {
+            const record = JSON.parse(decodeURIComponent(encodedRecord));
+            let text = '';
+            for (let [key, value] of Object.entries(record)) {
+                if (value && key !== '_type' && key !== '_sourceSheet') {
+                    text += `${key}: ${value}\n`;
+                }
+            }
+            
+            navigator.clipboard.writeText(text).then(() => {
+                alert('تم نسخ المعلومات');
+            });
+        };
+        
+        // إغلاق النافذة
+        window.closeModal = function() {
+            document.getElementById('detailsModal').classList.remove('active');
+        };
+        
+        // أحداث البحث
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+        
+        // أحداث علامات التبويب
+        document.querySelectorAll('.search-type-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.search-type-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentType = tab.dataset.type;
+                performSearch();
+            });
+        });
+        
+        // إغلاق النافذة عند الضغط خارجها
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('detailsModal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // بدء التحميل عند تحميل الصفحة
+        window.addEventListener('load', loadData);
+    </script>
+</body>
+</html>
